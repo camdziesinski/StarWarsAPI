@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "GetPlanetById";
+}
+@model Results
+<form action="../home/GetPlanetById" method="post">
+    <input type="number" name="id" min="1" max="61" />
+    <input type="submit" name="submit" value="Submit to search for planet by ID" />
+</form>
+<form action="../home/GetPeopleById" method="post">
+    <input type="number" name="id" min="1" max="88" />
+    <input type="submit" name="submit" value="Submit to search for person by ID" />
+</form>
+<h1>@Model.name</h1>
+<table class="table table-bordered">
+    <tr><td>Rotation Period</td><td>@Model.rotation_period</td></tr>
+    <tr><td>Orbital Period</td><td>@Model.orbital_period</td></tr>
+    <tr><td>Diameter</td><td>@Model.diameter</td></tr>
+    <tr><td>Climate</td><td>@Model.climate</td></tr>
+    <tr><td>Gravity</td><td>@Model.gravity</td></tr>
+    <tr><td>Terrain</td><td>@Model.terrain</td></tr>
+    <tr><td>Surface Water</td><td>@Model.surface_water</td></tr>
+    <tr><td>Population</td><td>@Model.population</td></tr>
+</table>

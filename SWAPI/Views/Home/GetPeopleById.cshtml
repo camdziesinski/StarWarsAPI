@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewData["Title"] = "GetPeopleById";
+}
+@model Result
+<form action="../home/GetPlanetById" method="post">
+    <input type="number" name="id" min="1" max="61" />
+    <input type="submit" name="submit" value="Submit to search for planet by ID" />
+</form>
+<form action="../home/GetPeopleById" method="post">
+    <input type="number" name="id" min="1" max="88" />
+    <input type="submit" name="submit" value="Submit to search for person by ID" />
+</form>
+<h1>@Model.name</h1>
+<table class="table table-bordered">
+    <tr><td>Height</td><td>@Model.height</td></tr>
+    <tr><td>Mass</td><td>@Model.mass</td></tr>
+    <tr><td>Hair Color</td><td>@Model.hair_color</td></tr>
+    <tr><td>Skin Color</td><td>@Model.skin_color</td></tr>
+    <tr><td>Eye Color</td><td>@Model.eye_color</td></tr>
+    <tr><td>Birth Year</td><td>@Model.birth_year</td></tr>
+    <tr><td>Gender</td><td>@Model.gender</td></tr>
+</table>
